@@ -54,44 +54,87 @@ export const AGENT = {
   onePlatformApiVersion: "v2beta1"
 };
 
-export const BUILT_IN_INTENTS = {
-  HelpIntent: ["help", "help me", "can you help me"],
-  StopIntent: ["stop", "off", "shut up"],
-  CancelIntent: ["cancel", "never mind", "forget it"],
-  YesIntent: [
-    "okay",
-    "of course",
-    "i don't mind",
-    "do it",
-    "ok",
-    "sounds good",
-    "confirm",
-    "that's correct",
-    "I agree",
-    "exactly",
-    "yes",
-    "yes please",
-    "sure"
-  ],
-  NoIntent: [
-    "no",
-    "I disagree",
-    "not really",
-    "not interested",
-    "I don't want that",
-    "I don't think so",
-    "definitely not",
-    "don't do it",
-    "no thanks"
-  ],
-  PauseIntent: ["pause", "pause that"],
-  ResumeIntent: ["continue", "resume", "continue", "keep going"],
-  RepeatIntent: ["repeat", "say that again", "repeat that"],
-  StartOverIntent: ["start over", "restart", "start again"],
-  PreviousIntent: ["go back", "skip back", "back up"],
-  NextIntent: ["next", "skip", "skip forward"],
-  LoopOffIntent: ["loop off"],
-  LoopOnIntent: ["loop", "loop on", "keep playing this"],
-  ShuffleOffIntent: ["stop shuffling", "shuffle off", "turn off shuffle"],
-  ShuffleOnIntent: ["shuffle", "shuffle on", "shuffle the music", "shuffle mode"]
+export const BUILT_IN_INTENTS: any = {
+  en: {
+    HelpIntent: ["help", "help me", "can you help me"],
+    StopIntent: ["stop", "off", "shut up"],
+    CancelIntent: ["cancel", "never mind", "forget it"],
+    YesIntent: [
+      "okay",
+      "of course",
+      "i don't mind",
+      "do it",
+      "ok",
+      "sounds good",
+      "confirm",
+      "that's correct",
+      "I agree",
+      "exactly",
+      "yes",
+      "yes please",
+      "sure"
+    ],
+    NoIntent: [
+      "no",
+      "I disagree",
+      "not really",
+      "not interested",
+      "I don't want that",
+      "I don't think so",
+      "definitely not",
+      "don't do it",
+      "no thanks"
+    ],
+    PauseIntent: ["pause", "pause that"],
+    ResumeIntent: ["continue", "resume", "continue", "keep going"],
+    RepeatIntent: ["repeat", "say that again", "repeat that"],
+    StartOverIntent: ["start over", "restart", "start again"],
+    PreviousIntent: ["go back", "skip back", "back up"],
+    NextIntent: ["next", "skip", "skip forward"],
+    LoopOffIntent: ["loop off"],
+    LoopOnIntent: ["loop", "loop on", "keep playing this"],
+    ShuffleOffIntent: ["stop shuffling", "shuffle off", "turn off shuffle"],
+    ShuffleOnIntent: ["shuffle", "shuffle on", "shuffle the music", "shuffle mode"]
+  },
+  de: {
+    HelpIntent: ["Hilfe", "Hilf mir", "können Sie mir helfen"],
+    StopIntent: ["halt", "aus", "halte den Mund, halt den Rand, Halt die Klappe"],
+    CancelIntent: ["stornieren", "keine Ursache", "Vergiss es"],
+    YesIntent: [
+      "OK",
+      "natürlich",
+      "es ist mir egal",
+      "Tu es",
+      "in Ordnung",
+      "klingt gut",
+      "bestätigen",
+      "das ist richtig",
+      "Genau",
+      "genau",
+      "Und es ist",
+      "ja bitte",
+      "sicher"
+    ],
+    NoIntent: [
+      "Nein",
+      "Ich bin nicht einverstanden",
+      "nicht wirklich",
+      "nicht interessiert",
+      "ich möchte das nicht",
+      "no lo creo",
+      "Definitiv nicht",
+      "TU es nicht",
+      "Nein Danke"
+    ],
+    PauseIntent: ["fortsetzen", "fortsetzen", "fortsetzen", "mach weiter"],
+    ResumeIntent: ["wiederholen", "Sag das nochmal", "wiederhole das"],
+    RepeatIntent: ["Von vorn anfangen", "Neustart", "nochmal beginnen"],
+    StartOverIntent: ["Von vorn anfangen", "Neustart", "nochmal beginnen"],
+    PreviousIntent: ["geh zurück", "überspringen zurück", "untermauern"],
+    NextIntent: ["Nächster", "überspringen", "nach vorne spulen"],
+    LoopOffIntent: ["Schleife aus"],
+    LoopOnIntent: ["Schleife", "Schlaufe an", "halten diese spielen"],
+    ShuffleOffIntent: ["Stopp-Shuffling", "abwälzen", "ausschalten Shuffle"],
+    ShuffleOnIntent: ["Mischen", "Shuffle auf", "mische die Musik", "Shuffle-Modus"]
+  }
 };

@@ -185,8 +185,18 @@ export class DialogflowSchema extends Schema {
       let { name, samples, events } = rawIntent;
       const { slotsDefinition } = rawIntent;
       name = name.replace("AMAZON.", "");
+      let BUILT_IN_INTENTS_PER_LANGUAGE: any = {};
+      const isLocaleInBuiltInIntent: boolean = !!BUILT_IN_INTENTS[locale];
 
-      const builtInIntentSamples = _.get(BUILT_IN_INTENTS, name, []);
+      if (!isLocaleInBuiltInIntent) {
+        throw new Error(
+          `No Built in Intent match for language: ${locale}, please verify your VUI file or extends the BUILT_IN_INTENT for the new language`
+        );
+      }
+
+      BUILT_IN_INTENTS_PER_LANGUAGE = BUILT_IN_INTENTS[locale];
+
+      const builtInIntentSamples = _.get(BUILT_IN_INTENTS_PER_LANGUAGE, name, []);
       samples = _(samples)
         .concat(builtInIntentSamples)
         .uniq()
