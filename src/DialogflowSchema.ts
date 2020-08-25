@@ -30,7 +30,7 @@ import { IVoxaSheet } from "./VoxaSheet";
 const NAMESPACE = "dialogflow";
 // https://developers.google.com/actions/localization/languages-locales
 
-const LOCALES = _([
+export const LOCALES = _([
   "en-US",
   "en-AU",
   "en-CA",

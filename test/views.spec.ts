@@ -22,10 +22,14 @@
 
 import { expect } from "chai";
 import fs from "fs-extra";
+import _ from "lodash";
 import path from "path";
 import { configurations } from "./mocha.spec";
 
 configurations.forEach(interaction => {
+  if (!_.includes(interaction.platforms, "alexa") && !interaction.alexaSpreadsheets) {
+    return;
+  }
   describe(`${interaction.name} Views`, () => {
     let views: any;
     before(async function before() {

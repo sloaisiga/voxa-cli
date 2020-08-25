@@ -24,6 +24,7 @@ import { expect } from "chai";
 import fs = require("fs-extra");
 import _ from "lodash";
 import path from "path";
+import { LOCALES } from "../src/DialogflowSchema";
 import { configurations } from "./mocha.spec";
 
 configurations.forEach(interactionFile => {
@@ -33,6 +34,25 @@ configurations.forEach(interactionFile => {
   ) {
     return;
   }
+
+  const interactionFileNameSplitted: string[] = interactionFile.interactionFileName.split("/");
+  const interactionFileName: any = interactionFileNameSplitted.pop();
+  const localesLowerCase: any = LOCALES.map(local => local.toLocaleLowerCase());
+
+  let localeInFile: any = localesLowerCase
+    .map((locale: any) => {
+      const result: any = interactionFileName.search(locale);
+      if (result !== -1) {
+        return locale.slice(0, -3);
+      }
+    })
+    .filter((l: any) => l);
+
+  if (_.isEmpty(localeInFile)) {
+    localeInFile.push("en-us".slice(0, -3));
+  }
+  localeInFile = _.head(localeInFile);
+
   describe(`${interactionFile.name} Dialogflow`, () => {
     let agent: any;
 
@@ -51,6 +71,7 @@ configurations.forEach(interactionFile => {
 
     describe("GOOGLE_ASSISTANT_WELCOME", () => {
       let intent: any;
+
       before(async () => {
         const intentPath = path.join(
           path.dirname(interactionFile.interactionFileName),
@@ -86,7 +107,7 @@ configurations.forEach(interactionFile => {
         const utterancesPath = path.join(
           path.dirname(interactionFile.interactionFileName),
           interactionFile.speechPath,
-          "dialogflow/production/intents/NumberIntent_usersays_en.json"
+          `dialogflow/production/intents/NumberIntent_usersays_${localeInFile}.json`
         );
 
         intent = JSON.parse((await fs.readFile(intentPath)).toString());
