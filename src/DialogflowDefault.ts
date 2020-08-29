@@ -54,6 +54,24 @@ export const AGENT = {
   onePlatformApiVersion: "v2beta1"
 };
 
+export const BUILT_IN_INTENTS_LIST: string[] = [
+  "HelpIntent",
+  "StopIntent",
+  "CancelIntent",
+  "YesIntent",
+  "NoIntent",
+  "PauseIntent",
+  "ResumeIntent",
+  "RepeatIntent",
+  "StartOverIntent",
+  "PreviousIntent",
+  "NextIntent",
+  "LoopOffIntent",
+  "LoopOnIntent",
+  "ShuffleOffIntent",
+  "ShuffleOnIntent"
+];
+
 export const BUILT_IN_INTENTS: any = {
   en: {
     HelpIntent: ["help", "help me", "can you help me"],

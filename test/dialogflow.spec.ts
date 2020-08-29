@@ -24,6 +24,7 @@ import { expect } from "chai";
 import fs = require("fs-extra");
 import _ from "lodash";
 import path from "path";
+import { BUILT_IN_INTENTS, BUILT_IN_INTENTS_LIST } from "../src/DialogflowDefault";
 import { LOCALES } from "../src/DialogflowSchema";
 import { configurations } from "./mocha.spec";
 
@@ -109,7 +110,6 @@ configurations.forEach(interactionFile => {
           interactionFile.speechPath,
           `dialogflow/production/intents/NumberIntent_usersays_${localeInFile}.json`
         );
-
         intent = JSON.parse((await fs.readFile(intentPath)).toString());
         intentUtterance = JSON.parse((await fs.readFile(utterancesPath)).toString());
       });
@@ -172,6 +172,59 @@ configurations.forEach(interactionFile => {
       it("should set slotRequired for the first slot to be true", () => {
         expect(intent.responses[0].parameters).to.have.lengthOf(1);
         expect(intent.responses[0].parameters[0].required).to.be.true;
+      });
+    });
+
+    describe(`Built In Intents ${interactionFileName}`, () => {
+      let intentList: string[];
+      let folderIntentsPath: string;
+      before(async () => {
+        folderIntentsPath = path.join(
+          path.dirname(interactionFile.interactionFileName),
+          interactionFile.speechPath,
+          "dialogflow/production/intents"
+        );
+
+        const intentFileName = BUILT_IN_INTENTS_LIST.map(i =>
+          i.concat(`_usersays_${localeInFile}.json`)
+        );
+        const filesName: string[] = _.flatMapDeep(
+          fs.readdirSync(folderIntentsPath).map(f => {
+            return intentFileName.filter(i => f === i);
+          })
+        );
+
+        intentList = _.chain(
+          filesName.map(file => intentFileName.filter(i => file === i)).filter(e => e)
+        )
+          .flattenDeep()
+          .uniq()
+          .value();
+      });
+
+      it("should validate built in intent samples", () => {
+        intentList.forEach(async i => {
+          const intentFile = JSON.parse(
+            (await fs.readFile(`${folderIntentsPath}/${i}`)).toString()
+          );
+          i = i.replace(`_usersays_${localeInFile}.json`, "");
+          const sampleList: string[] = _.uniq(BUILT_IN_INTENTS[localeInFile][i]);
+
+          const samplesInFile: string[] = intentFile.map(
+            (int: { data: [{ text: any }] }) => int.data[0].text
+          );
+
+          const customBuiltInIntents: string[] = ["StopIntent"];
+          const result: boolean = _.isEqual(sampleList, samplesInFile);
+          if (result) {
+            expect(result).to.be.true;
+          }
+
+          if (!result) {
+            const isCustom: boolean = customBuiltInIntents.includes(i);
+            expect(isCustom).to.be.true;
+          }
+        });
       });
     });
   });
