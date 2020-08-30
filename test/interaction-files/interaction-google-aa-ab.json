@@ -1,0 +1,8 @@
+{
+  "platforms": ["dialogflow"],
+  "spreadsheets": ["../spreadsheets/Voxa Cli Built In Intents-only-dialogflow aa-AB.xlsx"],
+  "viewsPath": "../out//google-sheet-aa-AB/",
+  "speechPath": "../out/google-sheet-aa-AB/speech-assets",
+  "contentPath": "../out/google-sheet-aa-AB/content",
+  "assetsPath": "../out/google-sheet-aa-AB/assets"
+}

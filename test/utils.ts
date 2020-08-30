@@ -49,7 +49,8 @@ type interactionNames =
   | "platform-specific"
   | "Excel-No-Dialog"
   | "Google-de-de"
-  | "Google-en-us";
+  | "Google-en-us"
+  | "Google-aa-ab";
 
 function loadInteraction(name: interactionNames) {
   try {
@@ -70,6 +71,7 @@ export function configurationToExecute() {
   const excelNoDialogInteraction = loadInteraction("Excel-No-Dialog");
   const googleInteractionDE = loadInteraction("Google-de-de");
   const googleInteractionEN = loadInteraction("Google-en-us");
+  const googleInteractionAA = loadInteraction("Google-aa-ab");
 
   if (_.isEmpty(googleSecret)) {
     googleInteraction.skip = true;
@@ -83,6 +85,7 @@ export function configurationToExecute() {
     platformSpecificInteraction,
     excelNoDialogInteraction,
     googleInteractionDE,
-    googleInteractionEN
+    googleInteractionEN,
+    googleInteractionAA
   ];
 }
