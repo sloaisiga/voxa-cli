@@ -1,0 +1,43 @@
+{
+  "no": {
+    "HelpIntent": ["hjelp", "hjelp meg", "kan du hjelpe meg"],
+    "StopIntent": ["Stoppe", "av", "hold kjeft"],
+    "CancelIntent": ["Avbryt", "glem det", "glem det"],
+    "YesIntent": [
+      "greit",
+      "selvfølgelig",
+      "Jeg har ikke noe imot",
+      "gjør det",
+      "ok",
+      "høres bra ut",
+      "bekrefte",
+      "det er riktig",
+      "jeg er enig",
+      "nøyaktig",
+      "ja",
+      "Ja takk",
+      "sikker"
+    ],
+    "NoIntent": [
+      "Nei",
+      "jeg er uenig",
+      "ikke egentlig",
+      "ikke interessert",
+      "Jeg ønsker ikke at",
+      "Jeg tror ikke det",
+      "definitivt ikke",
+      "ikke gjør det",
+      "Nei takk"
+    ],
+    "PauseIntent": ["pause", "pause som"],
+    "ResumeIntent": ["Fortsette", "gjenoppta", "Fortsette", "Fortsett"],
+    "RepeatIntent": ["gjenta", "si det igjen", "gjenta det"],
+    "StartOverIntent": ["begynne på nytt", "omstart", "starte på nytt"],
+    "PreviousIntent": ["gå tilbake", "hoppe tilbake", "sikkerhetskopiere"],
+    "NextIntent": ["neste", "hoppe", "hoppe fremover"],
+    "LoopOffIntent": ["sløyfe off"],
+    "LoopOnIntent": ["Løkke", "sløyfe på", "fortsette å spille dette"],
+    "ShuffleOffIntent": ["stop shuffling", "shuffle", "slå av shuffle"],
+    "ShuffleOnIntent": ["tilfeldig rekkefølge", "shuffle på", "shuffle musikken", "shuffle-modus"]
+  }
+}

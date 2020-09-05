@@ -1,0 +1,43 @@
+{
+  "de": {
+    "HelpIntent": ["Hilfe", "Hilf mir", "können Sie mir helfen"],
+    "StopIntent": ["halt", "aus", "halte den Mund, halt den Rand, Halt die Klappe"],
+    "CancelIntent": ["stornieren", "keine Ursache", "Vergiss es"],
+    "YesIntent": [
+      "OK",
+      "natürlich",
+      "es ist mir egal",
+      "Tu es",
+      "in Ordnung",
+      "klingt gut",
+      "bestätigen",
+      "das ist richtig",
+      "Genau",
+      "genau",
+      "Und es ist",
+      "ja bitte",
+      "sicher"
+    ],
+    "NoIntent": [
+      "Nein",
+      "Ich bin nicht einverstanden",
+      "nicht wirklich",
+      "nicht interessiert",
+      "Ich will nicht, dass",
+      "Ich glaube nicht",
+      "definitiv nicht",
+      "tun Sie es nicht",
+      "Nein Danke"
+    ],
+    "PauseIntent": ["fortsetzen", "fortsetzen", "fortsetzen", "mach weiter"],
+    "ResumeIntent": ["wiederholen", "Sag das nochmal", "wiederhole das"],
+    "RepeatIntent": ["Von vorn anfangen", "Neustart", "nochmal beginnen"],
+    "StartOverIntent": ["Von vorn anfangen", "Neustart", "nochmal beginnen"],
+    "PreviousIntent": ["geh zurück", "überspringen zurück", "untermauern"],
+    "NextIntent": ["Nächster", "überspringen", "nach vorne spulen"],
+    "LoopOffIntent": ["Schleife aus"],
+    "LoopOnIntent": ["Schleife", "Schlaufe an", "halten diese spielen"],
+    "ShuffleOffIntent": ["Stopp-Shuffling", "abwälzen", "ausschalten Shuffle"],
+    "ShuffleOnIntent": ["Mischen", "Shuffle auf", "mische die Musik", "Shuffle-Modus"]
+  }
+}

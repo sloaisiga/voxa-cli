@@ -1,0 +1,43 @@
+{
+  "nl": {
+    "HelpIntent": ["helpen", "Help mij", "kun je me helpen"],
+    "StopIntent": ["hou op", "uit", "hou je mond"],
+    "CancelIntent": ["Annuleer", "laat maar", "laat maar"],
+    "YesIntent": [
+      "Oke",
+      "natuurlijk",
+      "Ik vind het niet erg",
+      "doe het",
+      "OK",
+      "klinkt goed",
+      "bevestigen",
+      "dat is correct",
+      "ik ga akkoord",
+      "precies",
+      "Ja",
+      "Ja graag",
+      "zeker"
+    ],
+    "NoIntent": [
+      "Nee",
+      "ben ik het niet mee eens",
+      "niet echt",
+      "niet geïnteresseerd",
+      "Ik wil niet dat",
+      "Ik denk het niet",
+      "zeker niet",
+      "doe het niet",
+      "Nee, dank u wel"
+    ],
+    "PauseIntent": ["pauze", "pauzeren dat"],
+    "ResumeIntent": ["doorgaan met", "hervatten", "doorgaan met", "ga door"],
+    "RepeatIntent": ["herhaling", "Zeg dat nog eens", "herhaal dat"],
+    "StartOverIntent": ["begin opnieuw", "herstarten", "opnieuw beginnen"],
+    "PreviousIntent": ["ga terug", "overspringen terug", "een back-up"],
+    "NextIntent": ["De volgende", "overspringen", "Spring vooruit"],
+    "LoopOffIntent": ["lus off"],
+    "LoopOnIntent": ["lus", "lus op", "Bewaar deze spelen"],
+    "ShuffleOffIntent": ["stop schuifelen", "heenslenteren", "uitschakelen shuffle"],
+    "ShuffleOnIntent": ["schuifelen", "shuffle aan", "shuffle de muziek", "Shuffle modus"]
+  }
+}

@@ -1,0 +1,35 @@
+import * as daSamples from "./da.json";
+import * as deSamples from "./de.json";
+import * as enSamples from "./en.json";
+import * as esSamples from "./es.json";
+import * as frSamples from "./fr.json";
+import * as hiSamples from "./hi.json";
+import * as idSamples from "./id.json";
+import * as itSamples from "./it.json";
+import * as jaSamples from "./ja.json";
+import * as koSamples from "./ko.json";
+import * as nlSamples from "./nl.json";
+import * as noSamples from "./no.json";
+import * as ptSamples from "./pt.json";
+import * as ruSamples from "./ru.json";
+import * as svSamples from "./sv.json";
+import * as thSamples from "./th.json";
+
+const da: object = daSamples;
+const de: object = deSamples;
+const en: object = enSamples;
+const es: object = esSamples;
+const fr: object = frSamples;
+const hi: object = hiSamples;
+const id: object = idSamples;
+const it: object = itSamples;
+const ja: object = jaSamples;
+const ko: object = koSamples;
+const nl: object = nlSamples;
+const no: object = noSamples;
+const pt: object = ptSamples;
+const ru: object = ruSamples;
+const sv: object = svSamples;
+const th: object = thSamples;
+
+export const language: any[] = [en, de, da, es, fr, hi, id, it, ja, ko, nl, no, pt, ru, sv, th];

@@ -1,0 +1,43 @@
+{
+  "id": {
+    "HelpIntent": ["Tolong", "tolong aku", "Bisakah kamu membantuku"],
+    "StopIntent": ["berhenti", "mati", "diam"],
+    "CancelIntent": ["membatalkan", "lupakan", "lupakan"],
+    "YesIntent": [
+      "baik",
+      "tentu saja",
+      "Saya tidak keberatan",
+      "lakukan",
+      "baik",
+      "kedengarannya bagus",
+      "Konfirmasi",
+      "itu benar",
+      "saya setuju",
+      "persis",
+      "Iya",
+      "ya silahkan",
+      "Tentu"
+    ],
+    "NoIntent": [
+      "tidak",
+      "saya tidak setuju",
+      "tidak juga",
+      "tidak tertarik",
+      "Saya tidak ingin itu",
+      "Saya tidak berpikir begitu",
+      "tentu saja tidak",
+      "jangan lakukan itu",
+      "tidak, terima kasih"
+    ],
+    "PauseIntent": ["berhenti sebentar", "jeda yang"],
+    "ResumeIntent": ["terus", "lanjut", "terus", "teruskan"],
+    "RepeatIntent": ["ulang", "katakan itu lagi", "ulangi itu"],
+    "StartOverIntent": ["memulai", "mengulang kembali", "mulai lagi"],
+    "PreviousIntent": ["kembali", "melompat kembali", "mundur"],
+    "NextIntent": ["lanjut", "melewatkan", "melompat ke depan"],
+    "LoopOffIntent": ["lingkaran off"],
+    "LoopOnIntent": ["putaran", "loop pada", "terus bermain ini"],
+    "ShuffleOffIntent": ["berhenti menyeret", "menyingkiri", "mematikan mengocok"],
+    "ShuffleOnIntent": ["kocokan", "mengocok di", "mengocok musik", "mode acak"]
+  }
+}

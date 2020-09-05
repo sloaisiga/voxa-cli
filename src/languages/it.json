@@ -1,0 +1,52 @@
+{
+  "it": {
+    "HelpIntent": ["Aiuto", "aiutami", "Mi potete aiutare"],
+    "StopIntent": ["fermare", "via", "sta 'zitto"],
+    "CancelIntent": ["Annulla", "non importa", "Dimenticalo"],
+    "YesIntent": [
+      "va bene",
+      "ovviamente",
+      "non mi dispiace",
+      "fallo",
+      "ok",
+      "suona bene",
+      "Confermare",
+      "è corretto",
+      "sono d'accordo",
+      "Esattamente",
+      "sì",
+      "sì grazie",
+      "sicuro"
+    ],
+    "NoIntent": [
+      "no",
+      "non sono d'accordo",
+      "non proprio",
+      "non interessato",
+      "Non voglio che",
+      "Io non la penso così",
+      "sicuramente non",
+      "non farlo",
+      "No grazie"
+    ],
+    "PauseIntent": ["pausa", "pausa che"],
+    "ResumeIntent": ["Continua", "curriculum vitae", "Continua", "Continua così"],
+    "RepeatIntent": ["ripetere", "dire che ancora una volta", "ripetilo"],
+    "StartOverIntent": ["ricominciare", "ricomincia", "ricomincia"],
+    "PreviousIntent": ["torna indietro", "saltare indietro", "eseguire il backup"],
+    "NextIntent": ["Il prossimo", "Salta", "saltare avanti"],
+    "LoopOffIntent": ["ciclo off"],
+    "LoopOnIntent": ["ciclo continuo", "loop su", "continuare a giocare questo"],
+    "ShuffleOffIntent": [
+      "interrompere la riproduzione casuale",
+      "mischiare off",
+      "spegnere riordino"
+    ],
+    "ShuffleOnIntent": [
+      "rimescolare",
+      "mescolare su",
+      "mescolare la musica",
+      "modalità di riproduzione casuale"
+    ]
+  }
+}

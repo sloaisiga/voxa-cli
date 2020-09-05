@@ -23,7 +23,8 @@
 import _ from "lodash";
 import path from "path";
 import uuid from "uuid/v5";
-import { AGENT, BUILT_IN_INTENTS } from "./DialogflowDefault";
+import { AGENT } from "./DialogflowDefault";
+import * as builtInIntents from "./languages/index";
 import { IFileContent, IIntent, Schema } from "./Schema";
 import { IVoxaSheet } from "./VoxaSheet";
 
@@ -186,15 +187,18 @@ export class DialogflowSchema extends Schema {
       const { slotsDefinition } = rawIntent;
       name = name.replace("AMAZON.", "");
       let BUILT_IN_INTENTS_PER_LANGUAGE: any = {};
-      const isLocaleInBuiltInIntent: boolean = !!BUILT_IN_INTENTS[locale];
+      const noLocaleMatchInBuildInIntent: boolean = _.isEmpty(
+        builtInIntents.language.map(y => y[locale]).filter(e => e)[0]
+      );
 
-      if (!isLocaleInBuiltInIntent) {
+      if (noLocaleMatchInBuildInIntent) {
         throw new Error(
           `No Built in Intent match for language: ${locale}, please verify your VUI file or extends the BUILT_IN_INTENT for the new language`
         );
       }
 
-      BUILT_IN_INTENTS_PER_LANGUAGE = BUILT_IN_INTENTS[locale];
+      const result: any = builtInIntents.language.map(y => y[locale]).filter(e => e);
+      BUILT_IN_INTENTS_PER_LANGUAGE = result[0];
 
       const builtInIntentSamples = _.get(BUILT_IN_INTENTS_PER_LANGUAGE, name, []);
       samples = _(samples)

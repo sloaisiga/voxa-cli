@@ -1,0 +1,43 @@
+{
+  "sv": {
+    "HelpIntent": ["hjälp", "hjälp mig", "kan du hjälpa mig"],
+    "StopIntent": ["sluta", "av", "håll käften"],
+    "CancelIntent": ["annullera", "Glöm det", "Glöm det"],
+    "YesIntent": [
+      "Okej",
+      "självklart",
+      "Jag har inget emot",
+      "gör det",
+      "ok",
+      "låter bra",
+      "bekräfta",
+      "det stämmer",
+      "jag håller med",
+      "exakt",
+      "ja",
+      "Ja tack",
+      "Säker"
+    ],
+    "NoIntent": [
+      "Nej",
+      "jag håller inte med",
+      "inte riktigt",
+      "inte intresserad",
+      "Jag vill inte att",
+      "Jag tror inte det",
+      "definitivt inte",
+      "gör det inte",
+      "Nej tack"
+    ],
+    "PauseIntent": ["paus", "pausa att"],
+    "ResumeIntent": ["Fortsätta", "återuppta", "Fortsätta", "Fortsätt"],
+    "RepeatIntent": ["upprepa", "säga det igen", "repetera det"],
+    "StartOverIntent": ["börja om", "omstart", "börja om"],
+    "PreviousIntent": ["gå tillbaka", "hoppa tillbaka", "backa upp"],
+    "NextIntent": ["Nästa", "hoppa", "hoppa framåt"],
+    "LoopOffIntent": ["slinga av"],
+    "LoopOnIntent": ["slinga", "ögla på", "fortsätta spela här"],
+    "ShuffleOffIntent": ["stopp skyffling", "shuffle", "stänga shuffle"],
+    "ShuffleOnIntent": ["blanda", "shuffle på", "blanda musiken", "blandningsläget"]
+  }
+}

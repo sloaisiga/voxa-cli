@@ -1,0 +1,43 @@
+{
+  "fr": {
+    "HelpIntent": ["Aidez-moi", "Aidez moi", "Pouvez-vous m'aider"],
+    "StopIntent": ["Arrêtez", "de", "tais-toi"],
+    "CancelIntent": ["Annuler", "ça ne fait rien", "oublie"],
+    "YesIntent": [
+      "d'accord",
+      "bien sûr",
+      "Je ne me dérange pas",
+      "fais le",
+      "D'accord",
+      "ça m'a l'air bien",
+      "confirmer",
+      "c'est correct",
+      "je suis d'accord",
+      "exactement",
+      "Oui",
+      "Oui s'il vous plaît",
+      "sûr"
+    ],
+    "NoIntent": [
+      "non",
+      "je ne suis pas d'accord",
+      "pas vraiment",
+      "pas intéressé",
+      "Je ne veux pas que",
+      "Je ne pense pas",
+      "définitivement pas",
+      "ne pas le faire",
+      "Non merci"
+    ],
+    "PauseIntent": ["pause", "pause que"],
+    "ResumeIntent": ["continuer", "CV", "continuer", "continue"],
+    "RepeatIntent": ["répéter", "répète ça", "répète ça"],
+    "StartOverIntent": ["recommencer", "redémarrer", "recommencer"],
+    "PreviousIntent": ["retourner", "revenir en arrière", "sauvegarder"],
+    "NextIntent": ["suivant", "sauter", "sauter vers l'avant"],
+    "LoopOffIntent": ["boucle off"],
+    "LoopOnIntent": ["boucle", "boucle sur", "continuer à jouer ce"],
+    "ShuffleOffIntent": ["arrêt brassage", "rejeter", "désactiver lecture aléatoire"],
+    "ShuffleOnIntent": ["battage", "melanger sur", "mélanger la musique", "mode aléatoire"]
+  }
+}

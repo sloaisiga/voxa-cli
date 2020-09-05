@@ -24,8 +24,9 @@ import { expect } from "chai";
 import fs = require("fs-extra");
 import _ from "lodash";
 import path from "path";
-import { BUILT_IN_INTENTS, BUILT_IN_INTENTS_LIST } from "../src/DialogflowDefault";
+import { BUILT_IN_INTENTS_LIST } from "../src/DialogflowDefault";
 import { LOCALES } from "../src/DialogflowSchema";
+import * as builtIntents from "../src/languages/index";
 import { configurations } from "./mocha.spec";
 
 configurations.forEach(interactionFile => {
@@ -208,14 +209,17 @@ configurations.forEach(interactionFile => {
             (await fs.readFile(`${folderIntentsPath}/${i}`)).toString()
           );
           i = i.replace(`_usersays_${localeInFile}.json`, "");
-          const sampleList: string[] = _.uniq(BUILT_IN_INTENTS[localeInFile][i]);
-
+          const intentsPerLanguage = builtIntents.language
+            .map(el => el[localeInFile])
+            .filter(e => e)[0];
+          const sampleList: string[] = _.uniq(intentsPerLanguage[i]);
           const samplesInFile: string[] = intentFile.map(
             (int: { data: [{ text: any }] }) => int.data[0].text
           );
 
           const customBuiltInIntents: string[] = ["StopIntent"];
           const result: boolean = _.isEqual(sampleList, samplesInFile);
+
           if (result) {
             expect(result).to.be.true;
           }

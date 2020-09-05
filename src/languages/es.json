@@ -1,0 +1,47 @@
+{
+  "es": {
+    "HelpIntent": ["ayuda", "ayudame", "me puedes ayudar"],
+    "StopIntent": ["detener", "apagado", "Cállate"],
+    "CancelIntent": ["cancelar", "no importa", "olvídalo"],
+    "YesIntent": [
+      "bueno",
+      "por supuesto",
+      "no me importa",
+      "hazlo",
+      "Okay",
+      "suena bien",
+      "confirmar",
+      "eso es correcto",
+      "estoy de acuerdo",
+      "exactamente",
+      "si",
+      "sí por favor",
+      "Por supuesto"
+    ],
+    "NoIntent": [
+      "No",
+      "Estoy en desacuerdo",
+      "realmente no",
+      "no interesado",
+      "No quiero que",
+      "No lo creo",
+      "definitivamente no",
+      "no lo haga",
+      "no, gracias"
+    ],
+    "PauseIntent": ["pausa", "Suspender la"],
+    "ResumeIntent": ["Seguir", "currículum", "Seguir", "sigue adelante"],
+    "RepeatIntent": ["repetir", "Repitelo", "repite eso"],
+    "StartOverIntent": [" comenzar de nuevo", "reiniciar", "empezar de nuevo"],
+    "PreviousIntent": ["regresa", "saltar hacia atrás", "apoyo"],
+    "NextIntent": ["siguiente", "omitir", "saltar hacia adelante"],
+    "LoopOffIntent": ["fuera del bucle"],
+    "LoopOnIntent": ["lazo", "lazo en", "seguir jugando este"],
+    "ShuffleOffIntent": [
+      "interrumpir la reproducción aleatoria",
+      "irse arrastrando los pies",
+      "apague aleatoria"
+    ],
+    "ShuffleOnIntent": ["barajar", "ponerse rápidamente", "mezclar la música", "modo aleatorio"]
+  }
+}
